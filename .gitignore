@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 *.vscode
 # ignore items in the /data/ directory!
-data/
+data/*
 
 # C extensions
 *.so
