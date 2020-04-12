@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 # ignore items in the /data/ directory!
+/data/
 
 # C extensions
 *.so
