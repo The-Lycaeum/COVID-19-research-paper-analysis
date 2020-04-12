@@ -16,7 +16,7 @@ urls = ['https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-04-
 
 ## functions for unzipping the downloaded tar.gz files
 
-def unpack(filename):
+def unpack(filename, extractPath):
     total = untar(filename)
     if total:
         args = total, total > 1 and 's were' or ' was'
@@ -37,7 +37,7 @@ def untar(paths):
                 total += untar(os.path.join(path, new) for new in dir_list)
         elif os.path.isfile(path):
             try:
-                tarfile.open(path).extractall(os.path.dirname(path))
+                tarfile.open(path).extractall("data/interim/")
             except:
                 pass
             else:
@@ -62,7 +62,8 @@ for url in urls:
                 fname = url.split("/")[-1]
 
             print('Content Accessed: ', fname)
-            path = "../data/raw/" + fname
+            path = "data/raw/" + fname
+            extractPath = "data/interim" + fname
             print('Saving ', fname, " to location: ", path)
             with open(path, 'wb') as fd:
                 for chunk in r.iter_content(chunk_size=128):
@@ -72,7 +73,7 @@ for url in urls:
             print("Extracting file...", "\n")
             #fname = fname.split(".")[0]
             print(fname)
-            unpack(fname)
+            unpack(fname, extractPath)
             print("Extraction for ", fname, " complete.", "\n")
     except RequestException as e:
         print('Error: ', e, 'with URL: ', url)
