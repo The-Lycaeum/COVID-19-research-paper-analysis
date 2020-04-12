@@ -14,9 +14,10 @@ urls = ['https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-04-
 # if not, parse URL for filename
 
 for url in urls:
+    print('Attempting to connect to ', url)
     try:
         with requests.get(url) as r:
-            print('Attempting to connect to ', url)
+            
             print('Connection successful.  Downloading content...')
             fname = ''
             if "Content-Disposition" in r.headers.keys():
