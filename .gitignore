@@ -2,9 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+*.vscode
 # ignore items in the /data/ directory!
-src/data/
+data/
 
 # C extensions
 *.so

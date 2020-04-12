@@ -8,6 +8,13 @@ dependencies:
  - pandas
  - seaborn
  - openpyxl
+ - os
+ - json
+ - pprint
+ - copy
+ - tqdm
+ - shutil
+ - gzip
  - pip:
    - watermark
    - pytest
