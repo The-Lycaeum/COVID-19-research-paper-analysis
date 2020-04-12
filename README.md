@@ -8,8 +8,11 @@ Prerequisites:
  - Git
 
 Run the following commands:
+
 `git clone https://github.com/The-Lycaeum/COVID-19-research-paper-analysis.git`
+
 `cd COVID-19-research-paper-analysis`
+
 `conda env create -f environment.yml -n covid-papers`
 
 This creates the environment with the correct dependencies.  To access the environment:
