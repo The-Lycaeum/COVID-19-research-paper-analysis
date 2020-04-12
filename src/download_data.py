@@ -36,3 +36,5 @@ for url in urls:
         print('Error: ', e, 'with URL: ', url)
 
 print('\n', "All files finished downloading. Please check /data/raw.")
+
+
