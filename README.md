@@ -1,6 +1,8 @@
 # COVID-19-research-paper-analysis
 Taking massive amounts of research papers and using machine learning &amp; other analytics to help make them consumable.
 
+## Development Information
+
 ### How to install:
 
 Prerequisites:
@@ -25,3 +27,21 @@ After you add the packages to the environment.yml, you can use `pip install`, or
 
 `conda env update -f environment.yml -n covid-papers`
 
+
+## Directory Structure
+
+### Data directory
+
+Data is stored in the `src/data` directory.  There are 4 sub-directories in `src/data`: `data/raw`, `data/interim`, `data/processed`, and `data/other`. More about these divisions below.
+
+Since we don't want to store the data on Github, the data directory & its sub-directories should be empty except for specific .git files, and the `download_data.py` script.  Running this script should automatically download the raw data into your `src/data/raw` directory.
+
+### Data sub-directories
+
+#### data/raw
+
+#### data/interim
+
+#### data/processed
+
+#### data/other
